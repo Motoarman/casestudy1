@@ -1,2 +1,3 @@
 # casestudy1
-1st angular
+# casestudy1
+casestudy
