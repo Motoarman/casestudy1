@@ -1,46 +1,89 @@
 <div class="div1"></div>
 
-    <div>
-       <nav class="navbar">
-         <img
-           src="../assets/sarmi2-09.jpg"
-           alt="main-logo"
-           height="68"
-           width="100"
-          [border]="0"
-           />
- 
+<div>
+  <nav class="navbar">
+    <img
+      src="../assets/sarmi2-09.jpg"
+      alt="main-logo"
+      height="68"
+      width="100"
+      [border]="0"
+    />
     <a routerLink="/home" routerLinkActive="false">Home</a>
+    <div style="margin-left: 2em" class="dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        role="button"
+        id="dropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Patient section
+      </a>
+      <ul style="background-color: #005c90" class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="#"
+            >Available Treatments<Span class="arrow">&raquo;</Span></a
+          >
+          <ul class="dropdown-menu dropdown-submenu">
+            <li>
+              <a class="dropdown-item" routerLink="/dentistry">Dentistry</a>
+            </li>
+            <li >
+              <hr class="dropdown-divider" />
+              <a  class="dropdown-item"  routerLink="/cardiology">Cardiology</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+              <a class="dropdown-item"  routerLink="/orthopaedics">Orthopaedics</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+              <a class="dropdown-item" routerLink="/neurology">Neurology</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <hr class="dropdown-divider" />
+          <a class="dropdown-item" href="#">Emengency/Casulty</a>
+        </li>
+        <li>
+          <hr class="dropdown-divider" />
+          <a class="dropdown-item" href="#">Accommodation</a>
+        </li>
+        <li>
+          <hr class="dropdown-divider" />
+          <a class="dropdown-item" href="#">Canteen Service</a>
+        </li>
+        <li style="margin-bottom: 10px">
+          <hr class="dropdown-divider" />
+          <a class="dropdown-item" href="#">Available Government Schemes</a>
+        </li>
+      </ul>
+    </div>
+    <div style="margin-left: 9em" class="dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        role="button"
+        id="dropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Doctor Section</a
+      >
+      <div style="background-color: #005c90" class="dropdown-menu">
+        <a class="dropdown-item" href="#">Doctor Login</a>
+      </div>
+    </div>
 
-       <div style="margin-left:2em"  class="dropdown">
-           <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-               Patient section </a>
-                 <div style=" background-color:#005c90 ;" class="dropdown-menu animated fadeIn" >
-                       <a  class="dropdown-item" href="#">Link 1</a>
-                       <a  class="dropdown-item" href="#">Link 2</a>
-                       <a  class="dropdown-item" href="#">Link 3</a>
-    
-                </div>
- 
-      </div >   
-<div style="margin-left:9em"class="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Doctor Section</a>
-              <div style=" background-color:#005c90 ;" class="dropdown-menu" >
-                   <a  class="dropdown-item" href="#">Link 1</a>
-                   <a  class="dropdown-item" href="#">Link 2</a>
-                   <a  class="dropdown-item" href="#">Link 3</a>
-             </div>
-   
-</div>
-
-
-    <a style="margin-left:14em"routerLink="/about-us" routerLinkActive="false"
+    <a style="margin-left: 14em" routerLink="/about-us" routerLinkActive="false"
       >About-us</a
     >
-    <a routerLink="/contact-us" routerLinkActive="false"
-      >Contact-us</a
-    >
+    <a routerLink="/contact-us" routerLinkActive="false">Contact-us</a>
   </nav>
 </div>
 <div class="main-div">

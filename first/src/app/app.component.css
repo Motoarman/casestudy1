@@ -42,3 +42,33 @@ a{
   color: black;
 }
 
+.dropdown-menu > li:hover > .dropdown-submenu {
+  display: block;
+}
+
+.dropdown-menu li {
+  position: relative;
+  padding-top: 2px;
+}
+  
+.dropdown-menu .dropdown-submenu {
+  left: 100%;
+  top: -2px;
+  background-color: #005c90;
+}
+.dropdown-menu .dropdown-submenu-left {
+  right: 100%;
+  left: auto;
+}
+
+.arrow {
+  margin-left: 50px;
+  position:relative;
+  top:5px;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+
+
+
