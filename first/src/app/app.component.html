@@ -1,9 +1,49 @@
-<div class="div1">  
+<div class="div1"></div>
+
+    <div>
+       <nav class="navbar">
+         <img
+           src="../assets/sarmi2-09.jpg"
+           alt="main-logo"
+           height="68"
+           width="100"
+          [border]="0"
+           />
+ 
+    <a routerLink="/home" routerLinkActive="false">Home</a>
+
+       <div style="margin-left:2em"  class="dropdown">
+           <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+               Patient section </a>
+                 <div style=" background-color:#005c90 ;" class="dropdown-menu animated fadeIn" >
+                       <a  class="dropdown-item" href="#">Link 1</a>
+                       <a  class="dropdown-item" href="#">Link 2</a>
+                       <a  class="dropdown-item" href="#">Link 3</a>
+    
+                </div>
+ 
+      </div >   
+<div style="margin-left:9em"class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Doctor Section</a>
+              <div style=" background-color:#005c90 ;" class="dropdown-menu" >
+                   <a  class="dropdown-item" href="#">Link 1</a>
+                   <a  class="dropdown-item" href="#">Link 2</a>
+                   <a  class="dropdown-item" href="#">Link 3</a>
+             </div>
+   
 </div>
-<div>
-  <nav class="navbar">
-    <img src="../assets/sarmi2-09.jpg" alt="main-logo" height="68" width="100" [border]="1">
+
+
+    <a style="margin-left:14em"routerLink="/about-us" routerLinkActive="false"
+      >About-us</a
+    >
+    <a routerLink="/contact-us" routerLinkActive="false"
+      >Contact-us</a
+    >
   </nav>
 </div>
-<div class="main-div"></div>
+<div class="main-div">
+  <router-outlet></router-outlet>
+</div>
 <div class="footer-div"></div>

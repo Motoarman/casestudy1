@@ -8,6 +8,9 @@
   background-color: #05224e;
   margin: 0;
   padding: 0;
+  justify-content:start;
+ 
+
 }
 
 .main-div {
@@ -25,3 +28,17 @@ li{
   color: white;
    font-size: 15px;
 }
+
+a{
+  
+  color:white;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+  margin: auto;
+}
+
+.fontcolor{
+  color: black;
+}
+
