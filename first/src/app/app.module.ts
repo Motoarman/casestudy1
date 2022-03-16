@@ -12,7 +12,7 @@ import { OrthopaedicsComponent } from './orthopaedics/orthopaedics.component';
 import { NeurologyComponent } from './neurology/neurology.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
+
 
 var routelist: Routes = [
   { path: 'home', component: HomeComponent },
@@ -34,8 +34,7 @@ var routelist: Routes = [
     OrthopaedicsComponent,
     NeurologyComponent,
     HeaderComponent,
-    FooterComponent,
-    NavbarComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, RouterModule.forRoot(routelist)],
   providers: [],
