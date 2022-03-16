@@ -14,6 +14,7 @@ import { OrthopaedicsComponent } from './orthopaedics/orthopaedics.component';
 import { NeurologyComponent } from './neurology/neurology.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 var routelist: Routes = [
@@ -37,6 +38,7 @@ var routelist: Routes = [
     NeurologyComponent,
     HeaderComponent,
     FooterComponent,
+    NavbarComponent,
     
   ],
   imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule],
