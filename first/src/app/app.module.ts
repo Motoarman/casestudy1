@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -35,9 +36,10 @@ var routelist: Routes = [
     OrthopaedicsComponent,
     NeurologyComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routelist)],
+  imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
