@@ -1,19 +1,22 @@
 .contact-us
 {
     background-color:aliceblue;
-    padding:10px 50px 10px 50px;
+    padding: 1%;
+    width:100%
 }
 .login
 {
 
     background-color: white;
-    padding: 2px 10px 1px 10px;
+    padding: 0% 2% 1% 2%;
+    margin: 10% 30% 10% 30%;
 }
 
 @media screen and (max-width:600px) {
     .contact-us
 {
     background-color:aliceblue;
-    padding: 10px 5px;
+    padding: 3% 4% 3% 4%;
+    
 }
 }
