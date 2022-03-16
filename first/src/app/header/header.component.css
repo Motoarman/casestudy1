@@ -1,0 +1,13 @@
+img{
+  margin-left: 4vh;
+}
+
+p{
+  display: inline-flex;
+  margin-top: 2.5vh;
+  margin-left: 1vw;
+  margin-right: 5vw;
+  font-family: 'Merriweather';
+  font-size: 1vw;
+  color: white;
+}
