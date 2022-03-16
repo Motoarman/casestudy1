@@ -1,25 +1,6 @@
-.nav1{
-  height: 80px;
-
-}
-
 .div1 {
   height: 80px;
   background-image: linear-gradient(#0b9fd4, #005c90);
-}
-
-.navbar {
-  height: 70px;
-  background-color: #05224e;
-  margin: 0;
-  padding: 0;
-  justify-content: start;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-  /*stop auto close of menu*/
 }
 
 .main-div {
@@ -52,7 +33,14 @@ a {
   color: black;
 }
 
-.dropdown-menu > li:hover > .dropdown-submenu {
+.navbar.dropdown:hover .dropbtn {
+  background-color: #005c90;
+  color: aqua;
+} 
+
+
+
+.dropdown-menu li:hover> .dropdown-submenu {
   display: block;
 }
 
@@ -78,13 +66,13 @@ li{
 }
 
  a {
-  
+
   color:white;
   text-decoration: none;
   font-family:inherit;
   font-size: 11pt;
   margin-right: 30px;
- 
+
 }
 
 .arrow {
@@ -94,3 +82,10 @@ li{
   font-size: 2rem;
   line-height: 0;
 }
+
+
+#home{
+  color: white;
+}
+
+

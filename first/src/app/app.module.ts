@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule,Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -11,22 +11,19 @@ import { DentistryComponent } from './dentistry/dentistry.component';
 import { CardiologyComponent } from './cardiology/cardiology.component';
 import { OrthopaedicsComponent } from './orthopaedics/orthopaedics.component';
 import { NeurologyComponent } from './neurology/neurology.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
-
-var routelist : Routes =[
-  {path:"home",component:HomeComponent},
-  {path:"about-us",component:AboutUsComponent},
-  {path:"contact-us",component:ContactUsComponent},
-  {path:"dentistry",component:DentistryComponent},
-  {path:"cardiology",component:CardiologyComponent},
-  {path:"orthopaedics",component:OrthopaedicsComponent},
-  {path:"neurology",component:NeurologyComponent},
-  
-  
-  
-]
-
+var routelist: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'dentistry', component: DentistryComponent },
+  { path: 'cardiology', component: CardiologyComponent },
+  { path: 'orthopaedics', component: OrthopaedicsComponent },
+  { path: 'neurology', component: NeurologyComponent },
+];
 
 @NgModule({
   declarations: [
@@ -36,18 +33,12 @@ var routelist : Routes =[
     DentistryComponent,
     CardiologyComponent,
     OrthopaedicsComponent,
-    NeurologyComponent
-   
-   
-   
-   
+    NeurologyComponent,
+    HeaderComponent,
+    FooterComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routelist),
-    FormsModule
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routelist)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
