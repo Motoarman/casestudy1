@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule,Routes } from '@angular/router';
 
+
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -44,6 +45,7 @@ var routelist : Routes =[
   imports: [
     BrowserModule,
     RouterModule.forRoot(routelist),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
