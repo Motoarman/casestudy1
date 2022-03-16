@@ -1,19 +1,4 @@
-.div1 {
-    height: 80px;
-    background-image: linear-gradient(#0b9fd4, #005c90);
-  }
-  
-  .main-div {
-    height: 500px;
-    background-color:white;
-    width: 100%;
-  }
-  
-  .footer-div {
-    height: 200px;
-    background-image: linear-gradient(#0b9fd4, #005c90);
-  }
-  
+
   .dropdown-menu li:hover> .dropdown-submenu {
     display: block;
  }
@@ -48,6 +33,6 @@
 }
 
 .nav-item{
-    margin-right: 3 em;
+    margin-right: 3em;
 }
 
