@@ -16,6 +16,7 @@ import { NeurologyComponent } from './neurology/neurology.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { OncologyComponent } from './oncology/oncology.component';
 
 
 var routelist: Routes = [
@@ -40,7 +41,8 @@ var routelist: Routes = [
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
-    
+    OncologyComponent,
+
   ],
   imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule],
   providers: [],
