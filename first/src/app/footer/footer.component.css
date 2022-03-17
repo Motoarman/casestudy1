@@ -1,4 +1,4 @@
-#main-fooer-div
+.footer-div
 {
-  position: fixed;
+  position: sticky;
 }
