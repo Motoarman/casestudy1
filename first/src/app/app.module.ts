@@ -27,6 +27,8 @@ var routelist: Routes = [
   { path: 'cardiology', component: CardiologyComponent },
   { path: 'orthopaedics', component: OrthopaedicsComponent },
   { path: 'neurology', component: NeurologyComponent },
+  { path: 'oncology', component:OncologyComponent},
+  
 ];
 
 @NgModule({
