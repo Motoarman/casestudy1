@@ -16,6 +16,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OncologyComponent } from './oncology/oncology.component';
+import { EmergencyCasualtyComponent } from './patient-section/emergency-casualty/emergency-casualty.component';
+import { AccommodationComponent } from './patient-section/accommodation/accommodation.component';
+import { CanteenServiceComponent } from './patient-section/canteen-service/canteen-service.component';
+import { AvailableGovSchemesComponent } from './patient-section/available-gov-schemes/available-gov-schemes.component';
+import { DoctorLoginComponent } from './doctor-section/doctor-login/doctor-login.component';
 import { StudentService } from './student.service';
 
 
@@ -28,7 +33,12 @@ var routelist: Routes = [
   { path: 'orthopaedics', component: OrthopaedicsComponent },
   { path: 'neurology', component: NeurologyComponent },
   { path: 'oncology', component:OncologyComponent},
-  
+  {path:'accommodation', component:AccommodationComponent},
+  {path:'available-gov-schemes', component:AvailableGovSchemesComponent},
+  {path:'canteen-service', component:CanteenServiceComponent},
+  {path:'emergency-casaulty', component:EmergencyCasualtyComponent},
+  {path:'doctor-login', component:DoctorLoginComponent},
+
 ];
 
 @NgModule({
@@ -44,6 +54,11 @@ var routelist: Routes = [
     FooterComponent,
     NavbarComponent,
     OncologyComponent,
+    EmergencyCasualtyComponent,
+    AccommodationComponent,
+    CanteenServiceComponent,
+    AvailableGovSchemesComponent,
+    DoctorLoginComponent,
 
   ],
   imports: [
