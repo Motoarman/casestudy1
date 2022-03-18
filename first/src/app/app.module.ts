@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -46,7 +47,7 @@ var routelist: Routes = [
     OncologyComponent,
 
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule],
+  imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
