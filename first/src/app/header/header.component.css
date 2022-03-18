@@ -1,13 +1,19 @@
 img{
   margin-left: 4vh;
+  display: inline-block;
 }
 
 p{
-  display: inline-flex;
+  display: inline-block;
   margin-top: 2.5vh;
   margin-left: 1vw;
   margin-right: 5vw;
   font-family: 'Merriweather';
-  font-size: 1vw;
+  font-size: 0.75em;
   color: white;
+}
+@media only screen and (max-width: 800px) {
+  img{
+    display: block;
+  }
 }
