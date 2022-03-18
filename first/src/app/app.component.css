@@ -4,7 +4,8 @@
 }
 
 .main-div {
-  height: 500px;
+  position: relative;
+  height: 50em;
   background-color: white;
   width: 100%;
 }

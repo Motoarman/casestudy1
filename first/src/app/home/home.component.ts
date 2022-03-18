@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
+import { StudentService } from '../student.service';
+import { Istudent } from '../istudent';
+import { Observable } from 'rxjs';
 
+
+@Inject(StudentService)
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  students! : Istudent[];
+  constructor(private studentservice:StudentService) { }
 
   ngOnInit(): void {
+    this.studentservice.getAllStudents().subscribe((data:Istudent[]) => {
+      this.students = data;
+    });
   }
 
 }

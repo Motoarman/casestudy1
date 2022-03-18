@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -17,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OncologyComponent } from './oncology/oncology.component';
+import { StudentService } from './student.service';
 
 
 var routelist: Routes = [
@@ -46,8 +46,13 @@ var routelist: Routes = [
     OncologyComponent,
 
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule],
-  providers: [],
+  imports: [
+    BrowserModule, 
+    RouterModule.forRoot(routelist),
+    FormsModule,
+    HttpClientModule,
+  ],
+  providers: [StudentService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

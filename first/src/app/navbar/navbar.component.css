@@ -21,6 +21,7 @@
   
 
 .navbar ul li a {
+  position: relative;
     color:#fff;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -34,5 +35,9 @@
 
 .nav-item{
     margin-right: 3em;
+}
+
+.navbar{
+  position: relative;
 }
 

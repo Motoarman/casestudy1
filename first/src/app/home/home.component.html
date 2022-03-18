@@ -1,3 +1,11 @@
+<h1>student list</h1>
 <div>
-    <h1 class="text-center">hello</h1>
+
+  <div *ngfor ="let student students">
+    <p> name:    {{student.name}}  </p>
+    <p> rollno: {{student.rollno}} </p> 
+    <p> class:  {{student.class}} </p> 
+    <p> id:      {{student.id}} </p> 
+  </div>
+  
 </div>
