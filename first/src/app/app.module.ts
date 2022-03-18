@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { HomeComponent } from './home/home.component';
+
 import { DentistryComponent } from './dentistry/dentistry.component';
 import { CardiologyComponent } from './cardiology/cardiology.component';
 import { OrthopaedicsComponent } from './orthopaedics/orthopaedics.component';
@@ -23,22 +23,25 @@ import { CanteenServiceComponent } from './patient-section/canteen-service/cante
 import { AvailableGovSchemesComponent } from './patient-section/available-gov-schemes/available-gov-schemes.component';
 import { DoctorLoginComponent } from './doctor-section/doctor-login/doctor-login.component';
 import { StudentService } from './student.service';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 var routelist: Routes = [
-  { path: 'home', component: HomeComponent },
+   
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'dentistry', component: DentistryComponent },
   { path: 'cardiology', component: CardiologyComponent },
+  { path: 'oncology', component:OncologyComponent},
   { path: 'orthopaedics', component: OrthopaedicsComponent },
   { path: 'neurology', component: NeurologyComponent },
-  { path: 'oncology', component:OncologyComponent},
   {path:'accommodation', component:AccommodationComponent},
   {path:'available-gov-schemes', component:AvailableGovSchemesComponent},
   {path:'canteen-service', component:CanteenServiceComponent},
   {path:'emergency-casaulty', component:EmergencyCasualtyComponent},
   {path:'doctor-login', component:DoctorLoginComponent},
+  {path:'homepage', component:HomepageComponent}
+
 
 ];
 
@@ -60,6 +63,8 @@ var routelist: Routes = [
     CanteenServiceComponent,
     AvailableGovSchemesComponent,
     DoctorLoginComponent,
+    HomepageComponent,
+  
 
   ],
   imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule,ReactiveFormsModule],
