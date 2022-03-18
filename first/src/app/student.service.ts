@@ -11,13 +11,13 @@ export class StudentService {
   
   students!: Istudent[];
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
 
 getAllStudents():Observable<Istudent[]>{
-  return this.httpClient.get<Istudent[]>('http://localhost:3000/student',
+  return this.httpClient.get<Istudent[]>("http://localhost:3000/student",
   {
-   
+
    headers:{
      "Access-Control-Allow-Origin":"*"
    }

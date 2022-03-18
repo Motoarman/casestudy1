@@ -29,7 +29,7 @@ var allStudents = undefined;
 
 db.many("Select * from Student;")
 .then((data) => { 
-   this.allStudents =  data;
+   this.allStudents =data;
 }).catch((error) => {
     console.log("Error : " + error);
 });
