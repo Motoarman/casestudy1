@@ -1,7 +1,9 @@
 .footer-div
 {
-  position: relative; 
+  position: relative;
   background-color: #003257;
 }
 
-
+.header-div{
+display: inline;
+}
