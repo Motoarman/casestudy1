@@ -1,0 +1,4 @@
+CREATE TABLE Doctor_specialization(
+Id INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+Specialization_in VARCHAR(30)
+);
