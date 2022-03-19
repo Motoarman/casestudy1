@@ -43,7 +43,6 @@ const cors = require("cors");
 server.use(cors());
 
 server.get("/student",(req, res) => {
-    res.setHeader("content-type","application/json");
     res.send(this.allStudents);
 });
 

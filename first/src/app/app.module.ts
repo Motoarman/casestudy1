@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -22,8 +23,10 @@ import { AccommodationComponent } from './patient-section/accommodation/accommod
 import { CanteenServiceComponent } from './patient-section/canteen-service/canteen-service.component';
 import { AvailableGovSchemesComponent } from './patient-section/available-gov-schemes/available-gov-schemes.component';
 import { DoctorLoginComponent } from './doctor-section/doctor-login/doctor-login.component';
-import { StudentService } from './student.service';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ShowstudentComponent } from './showstudent/showstudent.component';
+
+
 
 
 var routelist: Routes = [
@@ -40,7 +43,10 @@ var routelist: Routes = [
   {path:'canteen-service', component:CanteenServiceComponent},
   {path:'emergency-casaulty', component:EmergencyCasualtyComponent},
   {path:'doctor-login', component:DoctorLoginComponent},
-  {path:'homepage', component:HomepageComponent}
+  {path:'homepage', component:HomepageComponent},
+  {path:'showstudent',component:ShowstudentComponent}
+
+
 
 
 ];
@@ -51,7 +57,6 @@ var routelist: Routes = [
     AboutUsComponent,
     ContactUsComponent,
     DentistryComponent,
-    CardiologyComponent,
     OrthopaedicsComponent,
     NeurologyComponent,
     HeaderComponent,
@@ -64,10 +69,14 @@ var routelist: Routes = [
     AvailableGovSchemesComponent,
     DoctorLoginComponent,
     HomepageComponent,
+    ShowstudentComponent,
+    CardiologyComponent
+ 
+   
   
 
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule,ReactiveFormsModule],
+  imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule,ReactiveFormsModule,HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
