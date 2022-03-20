@@ -30,7 +30,15 @@ const cn = {
 const db = pgp(cn); // database instance;
 
 var allStudents = undefined;
+var appointments=undefined;
 
+
+db.many("select * from patient_details inner join appointment on Appointment.patient_id = patient_details.id where doctor_id =4;")
+.then((data) => { 
+   this.appointments =data;
+}).catch((error) => {
+    console.log("Error : " + error);
+});
 
 db.many("Select * from contact_us;")
 .then((data) => { 
@@ -53,14 +61,14 @@ server.get("/student",(req, res) => {
     res.send(this.allStudents);
 });
 
+server.get("/appointments",(req, res) => {
+    res.send(this.appointments);
+});
 
 
 
 server.post('/user',urlencodedParser,(req, res) => {
 
-  var fname = req.body.firstname;
-  console.log(fname);
-  
     db.query("insert into contact_us(firstname, lastname,email_id, p_comment) values('arman','sakware','email','arm')",(err,res)=>{
         console.log(err,res);
         db.end();
