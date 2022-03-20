@@ -61,7 +61,7 @@ server.post('/user',urlencodedParser,(req, res) => {
   var fname = req.body.firstname;
   console.log(fname);
   
-    db.query("insert into CONTACT(firstname, lastname,email_id, p_comment) values(fname,'sakware',1,'arm')",(err,res)=>{
+    db.query("insert into contact_us(firstname, lastname,email_id, p_comment) values('arman','sakware','email','arm')",(err,res)=>{
         console.log(err,res);
         db.end();
     })

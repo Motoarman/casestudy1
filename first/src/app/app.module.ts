@@ -25,6 +25,7 @@ import { AvailableGovSchemesComponent } from './patient-section/available-gov-sc
 import { DoctorLoginComponent } from './doctor-section/doctor-login/doctor-login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ShowstudentComponent } from './showstudent/showstudent.component';
+import { BookAppointmentComponent } from './book-appointment/book-appointment.component';
 
 
 
@@ -70,7 +71,8 @@ var routelist: Routes = [
     DoctorLoginComponent,
     HomepageComponent,
     ShowstudentComponent,
-    CardiologyComponent
+    CardiologyComponent,
+    BookAppointmentComponent
  
    
   
