@@ -22,10 +22,14 @@ import { EmergencyCasualtyComponent } from './patient-section/emergency-casualty
 import { AccommodationComponent } from './patient-section/accommodation/accommodation.component';
 import { CanteenServiceComponent } from './patient-section/canteen-service/canteen-service.component';
 import { AvailableGovSchemesComponent } from './patient-section/available-gov-schemes/available-gov-schemes.component';
-import { DoctorLoginComponent } from './doctor-section/doctor-login/doctor-login.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { ShowstudentComponent } from './showstudent/showstudent.component';
 import { BookAppointmentComponent } from './book-appointment/book-appointment.component';
+import { DoctorPrajapatiComponent } from './Doctors/doctor-prajapati/doctor-prajapati.component';
+import { DoctorJadhavComponent } from './Doctors/doctor-jadhav/doctor-jadhav.component';
+import { DoctorShramaComponent } from './Doctors/doctor-shrama/doctor-shrama.component';
+import { DoctorDhawanComponent } from './Doctors/doctor-dhawan/doctor-dhawan.component';
+import { DoctorPatilComponent } from './Doctors/doctor-patil/doctor-patil.component';
+import { ShowAppForPrajapatiComponent } from './Doctors/doctor-prajapati/show-app-for-prajapati/show-app-for-prajapati.component';
 
 
 
@@ -43,9 +47,16 @@ var routelist: Routes = [
   {path:'available-gov-schemes', component:AvailableGovSchemesComponent},
   {path:'canteen-service', component:CanteenServiceComponent},
   {path:'emergency-casaulty', component:EmergencyCasualtyComponent},
-  {path:'doctor-login', component:DoctorLoginComponent},
   {path:'homepage', component:HomepageComponent},
-  {path:'showstudent',component:ShowstudentComponent}
+  {path:'drPrajapati',component:DoctorPrajapatiComponent},
+  {path:'drJadhav',component:DoctorJadhavComponent},
+  {path:'drSharma',component:DoctorShramaComponent},
+  {path:'drPatil',component:DoctorPatilComponent},
+  {path:'drDhawan',component:DoctorDhawanComponent},
+  {path:'showAppPraja',component:ShowAppForPrajapatiComponent},
+  {path:'bookAppoitnment',component:BookAppointmentComponent}
+
+
 
 
 
@@ -68,11 +79,15 @@ var routelist: Routes = [
     AccommodationComponent,
     CanteenServiceComponent,
     AvailableGovSchemesComponent,
-    DoctorLoginComponent,
     HomepageComponent,
-    ShowstudentComponent,
     CardiologyComponent,
-    BookAppointmentComponent
+    BookAppointmentComponent,
+    DoctorPrajapatiComponent,
+    DoctorJadhavComponent,
+    DoctorShramaComponent,
+    DoctorDhawanComponent,
+    DoctorPatilComponent,
+    ShowAppForPrajapatiComponent
  
    
   

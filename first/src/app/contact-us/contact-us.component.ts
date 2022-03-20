@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import { data } from 'jquery';
-import { StudentService } from '../student.service';
+import { DoctorServiceService } from 'src/app/doctor-service.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -11,7 +11,7 @@ import { StudentService } from '../student.service';
 export class ContactUsComponent{
 
   
-  constructor(private studentService : StudentService){
+  constructor(private doctorServiceService: DoctorServiceService){
 
   }
    
@@ -30,7 +30,7 @@ export class ContactUsComponent{
       Comment:this.contact.value.comment,
     }
 
-      this.studentService.submitUser(bodycomp).subscribe(data =>{
+      this.doctorServiceService.submitUser(bodycomp).subscribe(data =>{
          console.log(data);
       });
       

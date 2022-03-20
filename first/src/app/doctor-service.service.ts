@@ -1,23 +1,20 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Istudent  } from './istudent';
 import { Observable } from 'rxjs';
-import { AddInquiry } from './add-inquiry';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class StudentService {
-  
-  
+export class DoctorServiceService {
+
   students!: Istudent[];
   
 
   constructor(private httpClient: HttpClient) { }
 
   submitUser(user:any){
-  var name ="arman";
    return this.httpClient.post("http://localhost:3000/user",user,
    {
     
@@ -27,7 +24,6 @@ export class StudentService {
  
    })
    
-    
   }
 
 getAllStudents():Observable<Istudent[]>{
