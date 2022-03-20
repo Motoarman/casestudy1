@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Istudent  } from './istudent';
 import { Observable } from 'rxjs';
+import { AddInquiry } from './add-inquiry';
 
 
 @Injectable({
@@ -11,12 +12,22 @@ export class StudentService {
   
   
   students!: Istudent[];
+  
 
   constructor(private httpClient: HttpClient) { }
-  getStudents(){
-    const httpHeaders = new HttpHeaders();
-    httpHeaders.append('content-type','application/json');
-    return this.httpClient.get("http://localhost:3000/student",{headers:httpHeaders});
+
+  submitUser(user:any){
+  var name ="arman";
+   return this.httpClient.post("http://localhost:3000/user",user,
+   {
+    
+    headers:{
+      "Access-Control-Allow-Origin":"*"
+    }
+ 
+   })
+   
+    
   }
 
 getAllStudents():Observable<Istudent[]>{

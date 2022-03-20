@@ -1,6 +1,9 @@
 export interface Istudent {
-    id: number;
-    name: string;
-    class: string;
-    rollno:number;
+    contact_id: number;
+    firstname: string;
+    lastname: string;
+    email_id:number;
+    p_comment:string;
 }
+
+

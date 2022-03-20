@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
+import { data } from 'jquery';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -7,7 +9,13 @@ import { FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent{
-  contact = new FormGroup({
+
+  
+  constructor(private studentService : StudentService){
+
+  }
+   
+    contact = new FormGroup({
     firstname:new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]*')]),
     lastname:new FormControl('',[Validators.required]),
     email:new FormControl('',[Validators.required]),
@@ -15,7 +23,17 @@ export class ContactUsComponent{
   })
   onSubmit()
   {
-      console.log(this.contact.value),
+    const bodycomp={
+      firstname:this.contact.value.firstname,
+      lastname:this.contact.value.lastname,
+      email_id:this.contact.value.email,
+      Comment:this.contact.value.comment,
+    }
+
+      this.studentService.submitUser(bodycomp).subscribe(data =>{
+         console.log(data);
+      });
+      
       alert("Thanks for your response we will contact you soon")
       ;
   }

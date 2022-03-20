@@ -1,4 +1,8 @@
 const promise = require("bluebird");
+var bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 
 
 const initOptions = {
@@ -12,7 +16,7 @@ const pgp = require('pg-promise')(initOptions);
 const cn = {
     host: 'localhost', // 'localhost' is the default;
     port: 5432, // 5432 is the default;
-    database: 'Student_db',
+    database: 'lifeplus_db',
     user: 'lifeplus',
     password: 'root',
 
@@ -27,7 +31,8 @@ const db = pgp(cn); // database instance;
 
 var allStudents = undefined;
 
-db.many("Select * from Student;")
+
+db.many("Select * from CONTACT;")
 .then((data) => { 
    this.allStudents =data;
 }).catch((error) => {
@@ -35,10 +40,12 @@ db.many("Select * from Student;")
 });
 
 
+
 const express = require("express");
 const server = express();
 const port = 3000;
 const cors = require("cors");
+
 
 server.use(cors());
 
@@ -46,7 +53,24 @@ server.get("/student",(req, res) => {
     res.send(this.allStudents);
 });
 
+
+
+
+server.post('/user',urlencodedParser,(req, res) => {
+
+  var fname = req.body.firstname;
+  console.log(fname);
+  
+    db.query("insert into CONTACT(firstname, lastname,email_id, p_comment) values(fname,'sakware',1,'arm')",(err,res)=>{
+        console.log(err,res);
+        db.end();
+    })
+      
+    })
+
+
 server.listen(port,()=> {
         console.log("Server started");
 });
+
 
