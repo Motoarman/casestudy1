@@ -1,9 +1,14 @@
+.header-div{
+display: inline;
+}
+
+.main-div{
+  min-height: 70vh;
+}
+
 .footer-div
 {
   position: relative;
   background-color: #003257;
 }
 
-.header-div{
-display: inline;
-}
