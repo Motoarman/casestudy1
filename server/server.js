@@ -32,7 +32,7 @@ const db = pgp(cn); // database instance;
 var allStudents = undefined;
 
 
-db.many("Select * from CONTACT;")
+db.many("Select * from contact_us;")
 .then((data) => { 
    this.allStudents =data;
 }).catch((error) => {
