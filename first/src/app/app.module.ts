@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,AfterViewInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -35,7 +35,7 @@ import { ShowAppForPrajapatiComponent } from './Doctors/doctor-prajapati/show-ap
 
 
 var routelist: Routes = [
-   
+
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'dentistry', component: DentistryComponent },
@@ -88,9 +88,9 @@ var routelist: Routes = [
     DoctorDhawanComponent,
     DoctorPatilComponent,
     ShowAppForPrajapatiComponent
- 
-   
-  
+
+
+
 
   ],
   imports: [BrowserModule, RouterModule.forRoot(routelist),FormsModule,ReactiveFormsModule,HttpClientModule],
