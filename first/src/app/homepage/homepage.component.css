@@ -1,22 +1,30 @@
+.home-tagline{
+  height: 20%;
+}
 .home-tagline h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--black);
+  margin-left: 30%;
 }
 
+.home-tagline a{
+  margin-left: 20%;
+}
 .home-tagline h1 span {
   color: var(--blue);
 }
 .home-tagline h3  {
   color: var(--black);
-  font-size: 4rem;
+  font-size: 2rem;
+  margin-left: 65%;
 }
 
 .button{
-   height: 3.5rem;
-   width: 15rem;
+   height: 2%;
+   width: 10%;
    background: var(--blue);
    color: #fff;
-   font-size: 1.7rem;
+   font-size: 1.3rem;
    text-transform: capitalize;
    cursor: pointer;
    position: relative;
@@ -24,6 +32,7 @@
    overflow: hidden;
    border-radius: 0.5rem;
    margin: 1rem 0;
+   margin-left: 20%;
 }
 
 .button::before{
@@ -70,7 +79,9 @@
 .logo span {
   color: var(--blue);
 }
-
+.carouselExampleIndicators{
+  height: 10%;
+}
 /* @media (max-width: 768px) {
   html {
     font-size: 55%;
