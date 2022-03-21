@@ -1,7 +1,8 @@
 const promise = require("bluebird");
-var bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const bodyParser = require('body-parser');
+
+
+
 
 
 
@@ -52,12 +53,28 @@ db.many("Select * from contact_us;")
 
 const express = require("express");
 const server = express();
-const port = 3000;
 const cors = require("cors");
 const { response } = require("express");
 
 
 server.use(cors());
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false })  
+
+server.use(express.static('public'));  
+
+server.post('/student',urlencodedParser,function (req, res) {  
+   console.log(req.body);  
+   res.end(JSON.stringify(response));  
+   
+   
+});
+var ser = server.listen(3000, function () {  
+  var host = ser.address().address  
+  var port = ser.address().port  
+  console.log("Example app listening at http://%s:%s", host, port)  
+})  
+
 
 server.get("/student",(req, res) => {
     res.send(this.allStudents);
@@ -67,22 +84,17 @@ server.get("/appointments",(req, res) => {
     res.send(this.appointments);
 });
 
-server.get("/contact",(req, res) => {
-    res.send(this.contact);
-});
 
-server.post('/user',urlencodedParser,(req, res) => {
-   console.log(req.body);
+
+server.post('/user',(req, res) => {
+    console.log('I got a request')
+    console.log(req.body);
     
-   // db.none("insert into contact_us(firstname, lastname,email_id, p_comment) values('$1','sakware','email','arm'),fname",(err,res)=>{
-  //      console.log(err,res);
- //   })
+    // db.none("insert into contact_us(firstname, lastname,email_id, p_comment) values('$1','sakware','email','arm'),fname",(err,res)=>{
+   //     console.log(err,res);
+   // })
       
     })
 
-
-server.listen(port,()=> {
-        console.log("Server started");
-});
 
 

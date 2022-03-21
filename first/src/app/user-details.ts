@@ -1,5 +1,5 @@
 export interface UserDetails {
-    firstname :string;
+    firstname:string;
     lastname :string;
     email_id :string;
     p_Comment :string;

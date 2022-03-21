@@ -14,11 +14,11 @@ export class DoctorServiceService {
   appointment! :Appointment[];
   students!: Istudent[];
   userDetails!: UserDetails[];
-  user!:UserDetails[];
-
+  
   constructor(private httpClient: HttpClient) { }
 
-  submitUser(user:UserDetails){
+  
+  /*submitUser(user:UserDetails[]){
    return this.httpClient.post("http://localhost:3000/user",user,
    {
     
@@ -28,6 +28,16 @@ export class DoctorServiceService {
  
    })
    
+   
+   
+  }*/
+
+  addHero(hero:any) {
+    return this.httpClient.post<UserDetails[]>("http://localhost:3000/process",hero,{
+      headers:{
+        "Access-Control-Allow-Origin":"*"
+      }
+    })
   }
 
 getAllStudents():Observable<Istudent[]>{
