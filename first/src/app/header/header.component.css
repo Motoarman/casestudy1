@@ -1,6 +1,6 @@
 img{
   margin-left: 5vw;
-  display: inline;
+  display: inline-block;
 }
 
 p{
@@ -15,6 +15,7 @@ p{
 
 .header-content{
   background-color: #003257;
+  width: auto;
 }
 
 @media only screen and (max-width: 800px) {
@@ -27,6 +28,5 @@ p{
 @media only screen and (max-width: 800px) {
   img{
     display: inline;
-    margin-right: 20%;
   }
 }

@@ -1,3 +1,18 @@
-.emergency-casualty-main{
-  height: 20vmax;
+.card-body{
+  display: inline-block;
+}
+
+.card{
+  display: inline-block;
+  width: 50%;
+  margin-top: -20%;
+}
+
+.table-div{
+  display: inline-block;
+  width: 40%;
+  margin-top: 5vh;
+}
+table{
+  margin-top: 2vh;
 }
