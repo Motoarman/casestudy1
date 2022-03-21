@@ -1,18 +1,14 @@
-.card-body{
-  display: inline-block;
-}
-
-.card{
-  display: inline-block;
-  width: 50%;
-  margin-top: -20%;
-}
 
 .table-div{
-  display: inline-block;
-  width: 40%;
+  display: inline;
+  width: 30%;
   margin-top: 5vh;
 }
+
 table{
   margin-top: 2vh;
+}
+.emergency-casualty-description{
+  display: inline;
+  width: 70%;
 }
