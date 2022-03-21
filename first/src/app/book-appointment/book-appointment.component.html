@@ -1,1 +1,107 @@
-<p>book-appointment works!</p>
+<section class="book-appointment">
+    <div class="login col-lg-4 m-auto" shadow-lg>
+        <form [formGroup]="book_appointment">
+            <h2>Book Appointment</h2>
+            <h3>Patient details</h3>
+            <div class="form-group">
+                <label for="firstname" class="form-label">FirstName</label>
+                <input type="text" class="form-control" placeholder="Name" id="firstname" name="firstname"
+                    formControlName="firstname" ngModel required />
+                <span class="error-msg" *ngIf="
+                    book_appointment.get('firstname')?.errors &&
+                    book_appointment.get('firstname')?.touched
+                  ">This is required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="lastname" class="form-label">LastName</label>
+                <input type="text" class="form-control" placeholder="Surname" id="lastname" name="lastname"
+                    formControlName="lastname" ngModel required />
+                <span class="error-msg" *ngIf="
+                    book_appointment.get('lastname')?.errors && book_appointment.get('lastname')?.touched
+                  ">This is required</span>
+            </div>
+
+            <div>
+                <label for="phone_no">Phone_no</label><br>
+                <input type="tel" formControlName="phone_no"  id="phone_no" name="phone_no" placeholder="123-45-67890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{5}" required>
+                
+                <span class="error-msg" *ngIf="
+                    book_appointment.get('phone_no')?.errors && book_appointment.get('phone_no')?.touched
+                  ">This is required</span>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email" class="form-label">Email address </label>
+                <input type="email" class="form-control" placeholder="eg. abc@gmail.com" id="email" name="email"
+                    aria-describedby="emailHelp" required formControlName="email" ngModel required />
+                <span class="error-msg" *ngIf="book_appointment.get('email')?.errors && book_appointment.get('email')?.touched">This is required
+                    </span>
+            </div>
+            <div class="form-group">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" placeholder="enter your age" id="age" name="age"
+                    formControlName="age" ngModel required />
+                <span class="error-msg" *ngIf="book_appointment.get('age')?.errors && book_appointment.get('age')?.touched">This is required
+                    </span>
+            </div>
+            <div class="form-group">
+                <label for="gender" class="form-label">Gender</label>
+                <div class="form-group">
+                    <select id="gender" name="gender" formControlName="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <span class="error-msg" *ngIf="
+                    book_appointment.get('gender')?.errors && book_appointment.get('gender')?.touched
+                  ">This is required</span>
+            </div>
+
+            <div class="form-group">
+                <label for="medical_complaint" class="form-label">Medical_complaint:</label>
+                <textarea class="form-control" rows="2" id="medical_complaint" name="medical_complaint"
+                    formControlName="medical_complaint" ngModel required>
+                </textarea>
+                <span class="error-msg" *ngIf="
+                    book_appointment.get('medical_complaint')?.errors && book_appointment.get('medical_complaint')?.touched
+                  ">This is required</span>
+            </div>
+
+            <div class="form-group">
+                <label for="selected_date">Selected_date: </label>
+                <input type="date" formControlName="selected_date" id="selected_date" name="selected_date">
+                
+                <span class="error-msg" *ngIf="
+                book_appointment.get('selected_date')?.errors && book_appointment.get('selected_date')?.touched
+              ">This is required</span>
+            </div>
+            <div>
+            <label for="selected_slot">Selected_slot: </label>
+            <input type="time" id="selected_slot" name="selected_slot" formControlName="selected_slot">
+            <span class="error-msg" *ngIf="
+                book_appointment.get('selected_slot')?.errors && book_appointment.get('selected_slot')?.touched
+              ">This is required</span>
+            </div>
+
+            <div class="form-group">
+                <label for="visiting_status" class="form-label">Visiting_status</label>
+                <div class="form-group">
+                    <select id="visiting_status" name="visiting_status" formControlName="visiting_status">
+                        <option value="visited before">Visited before</option>
+                        <option value="visiting for the first time">Visiting for the first time</option>
+                    </select>
+                </div>
+                <span class="error-msg" *ngIf="
+                book_appointment.get('visiting_status')?.errors && book_appointment.get('visiting_status')?.touched
+              ">This is required</span>
+            </div>
+
+            <button type="submit" (click)="onSubmit()" class="btn btn-primary col-lg-12">
+                Book Appointment
+            </button>
+
+        </form>
+        <form [formGroup]="book_appointment" (ngSubmit)="onSubmit()"></form>
+    </div>
+</section>
