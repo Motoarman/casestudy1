@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import { DoctorServiceService } from 'src/app/doctor-service.service';
@@ -10,10 +9,9 @@ import { UserDetails } from '../user-details';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent{
- 
 
   UserDetails! :UserDetails[]
-  constructor(private httpClient:HttpClient){
+  constructor(private doctorServiceService: DoctorServiceService){
 
   }
    
@@ -25,27 +23,21 @@ export class ContactUsComponent{
 
     
   })
-  
-  onSubmit(data: any)
+ 
+  onSubmit(data:any)
   {
     
-    this.httpClient.post('http://localhost:3000/student',data).subscribe((result)=>{
-      console.warn("result",result);
-    })
-    alert("Thanks for your response we will contact you soon");
-    console.warn(data);
-    
-  }
 
-    
     //  this.doctorServiceService.submitUser(book).subscribe(data =>{
         
      // });
 
-     
+      this.doctorServiceService.addEnquiry(data).subscribe(result =>{
+        console.log(result);
+      });
       
-    
-      
+      alert("Thanks for your response we will contact you soon")
+      ;
   }
 
-
+}

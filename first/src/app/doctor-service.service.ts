@@ -32,8 +32,8 @@ export class DoctorServiceService {
    
   }*/
 
-  addHero(hero:any) {
-    return this.httpClient.post<UserDetails[]>("http://localhost:3000/process",hero,{
+  addEnquiry(hero:any) {
+    return this.httpClient.post<UserDetails[]>("http://localhost:3000/student",hero,{
       headers:{
         "Access-Control-Allow-Origin":"*"
       }

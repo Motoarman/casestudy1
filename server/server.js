@@ -58,13 +58,20 @@ const { response } = require("express");
 
 
 server.use(cors());
+server.use(bodyParser.json());
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })  
 
 server.use(express.static('public'));  
 
 server.post('/student',urlencodedParser,function (req, res) {  
-   console.log(req.body);  
+   firstname=(req.body.firstname);
+   lastname=(req.body.lastname);
+   email=(req.body.email);
+   comment=(req.body.comment);
+   db.none("insert into contact_us(firstname,lastname, email_id, p_comment) values($1,$2,$3,$4)",[firstname,lastname,email,comment],(err,res)=>{
+    console.log(err,res);
+})
    res.end(JSON.stringify(response));  
    
    
@@ -87,12 +94,9 @@ server.get("/appointments",(req, res) => {
 
 
 server.post('/user',(req, res) => {
-    console.log('I got a request')
     console.log(req.body);
     
-    // db.none("insert into contact_us(firstname, lastname,email_id, p_comment) values('$1','sakware','email','arm'),fname",(err,res)=>{
-   //     console.log(err,res);
-   // })
+    
       
     })
 
