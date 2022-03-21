@@ -13,3 +13,4 @@ export class DentistryComponent implements OnInit {
   }
 
 }
+

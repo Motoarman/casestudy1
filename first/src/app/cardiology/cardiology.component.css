@@ -1,3 +1,12 @@
-.dropdown-div{
+.main{
    height: 100vh;
+}
+.appointment-link{
+   text-align: center;
+}
+button{
+   background-color: blue;
+}
+.Cardiology{
+   background-color: aliceblue;
 }
