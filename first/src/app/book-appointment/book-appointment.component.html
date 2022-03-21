@@ -24,8 +24,8 @@
 
             <div>
                 <label for="phone_no">Phone_no</label><br>
-                <input type="tel" id="phone_no" name="phone_no" placeholder="123-45-67890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{5}" required>
-                <input type="submit">
+                <input type="tel" formControlName="phone_no"  id="phone_no" name="phone_no" placeholder="123-45-67890" pattern="[0-9]{3}-[0-9]{2}-[0-9]{5}" required>
+                
                 <span class="error-msg" *ngIf="
                     book_appointment.get('phone_no')?.errors && book_appointment.get('phone_no')?.touched
                   ">This is required</span>
@@ -46,23 +46,22 @@
                     </span>
             </div>
             <div class="form-group">
-                <div class="form-check">
-                     <label for="gender" class="form-check-label">Gender</label>
+                <label for="gender" class="form-label">Gender</label>
+                <div class="form-group">
+                    <select id="gender" name="gender" formControlName="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
                 </div>
-                    <div>
-                     <input class="form-check-input" type="radio" id="gender" name="gender" value="Male" checked>
-                     <label for="gender" class="form-check-label">Male</label>
-                    </div>
-                    <div>
-                        <input class="form-check-input" type="radio" id="gender" name="gender" value="Female" checked>
-                        <label for="gender" class="form-check-label">Female</label>
-                    </div>
+                <span class="error-msg" *ngIf="
+                    book_appointment.get('gender')?.errors && book_appointment.get('gender')?.touched
+                  ">This is required</span>
             </div>
 
             <div class="form-group">
                 <label for="medical_complaint" class="form-label">Medical_complaint:</label>
                 <textarea class="form-control" rows="2" id="medical_complaint" name="medical_complaint"
-                    formControlName="medical-complaint" ngModel required>
+                    formControlName="medical_complaint" ngModel required>
                 </textarea>
                 <span class="error-msg" *ngIf="
                     book_appointment.get('medical_complaint')?.errors && book_appointment.get('medical_complaint')?.touched
@@ -71,15 +70,15 @@
 
             <div class="form-group">
                 <label for="selected_date">Selected_date: </label>
-                <input type="date" id="selected_date" name="selected_date">
-                <input type="submit">
+                <input type="date" formControlName="selected_date" id="selected_date" name="selected_date">
+                
                 <span class="error-msg" *ngIf="
                 book_appointment.get('selected_date')?.errors && book_appointment.get('selected_date')?.touched
               ">This is required</span>
             </div>
             <div>
             <label for="selected_slot">Selected_slot: </label>
-            <input type="time" id="selected_slot" name="selected_slot">
+            <input type="time" id="selected_slot" name="selected_slot" formControlName="selected_slot">
             <span class="error-msg" *ngIf="
                 book_appointment.get('selected_slot')?.errors && book_appointment.get('selected_slot')?.touched
               ">This is required</span>
@@ -88,7 +87,7 @@
             <div class="form-group">
                 <label for="visiting_status" class="form-label">Visiting_status</label>
                 <div class="form-group">
-                    <select id="visiting_status" name="visiting_status">
+                    <select id="visiting_status" name="visiting_status" formControlName="visiting_status">
                         <option value="visited before">Visited before</option>
                         <option value="visiting for the first time">Visiting for the first time</option>
                     </select>
@@ -101,7 +100,6 @@
             <button type="submit" (click)="onSubmit()" class="btn btn-primary col-lg-12">
                 Book Appointment
             </button>
-
 
         </form>
         <form [formGroup]="book_appointment" (ngSubmit)="onSubmit()"></form>

@@ -28,9 +28,8 @@ export class BookAppointmentComponent implements OnInit {
 onSubmit()
   {
       console.log(this.book_appointment.value),
-      alert("Thanks for your response we will contact you soon")
+      alert("Your appointment is booked")
       ;
   }
-
 
 }
