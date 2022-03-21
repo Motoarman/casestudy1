@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Istudent  } from './istudent';
 import { Appointment } from './appointment';
 import { Observable } from 'rxjs';
+import { UserDetails } from './user-details';
 
 
 @Injectable({
@@ -12,12 +13,12 @@ import { Observable } from 'rxjs';
 export class DoctorServiceService {
   appointment! :Appointment[];
   students!: Istudent[];
- 
-  
+  userDetails!: UserDetails[];
+  user!:UserDetails[];
 
   constructor(private httpClient: HttpClient) { }
 
-  submitUser(user:any){
+  submitUser(user:UserDetails){
    return this.httpClient.post("http://localhost:3000/user",user,
    {
     

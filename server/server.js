@@ -31,6 +31,7 @@ const db = pgp(cn); // database instance;
 
 var allStudents = undefined;
 var appointments=undefined;
+var contact =undefined;
 
 
 db.many("select * from patient_details inner join appointment on Appointment.patient_id = patient_details.id where doctor_id =4;")
@@ -53,6 +54,7 @@ const express = require("express");
 const server = express();
 const port = 3000;
 const cors = require("cors");
+const { response } = require("express");
 
 
 server.use(cors());
@@ -65,14 +67,16 @@ server.get("/appointments",(req, res) => {
     res.send(this.appointments);
 });
 
-
+server.get("/contact",(req, res) => {
+    res.send(this.contact);
+});
 
 server.post('/user',urlencodedParser,(req, res) => {
-
-    db.query("insert into contact_us(firstname, lastname,email_id, p_comment) values('arman','sakware','email','arm')",(err,res)=>{
-        console.log(err,res);
-        db.end();
-    })
+   console.log(req.body);
+    
+   // db.none("insert into contact_us(firstname, lastname,email_id, p_comment) values('$1','sakware','email','arm'),fname",(err,res)=>{
+  //      console.log(err,res);
+ //   })
       
     })
 

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import { data } from 'jquery';
 import { DoctorServiceService } from 'src/app/doctor-service.service';
+import { UserDetails } from '../user-details';
 
 @Component({
   selector: 'app-contact-us',
@@ -23,15 +24,15 @@ export class ContactUsComponent{
   })
   onSubmit()
   {
-    const bodycomp={
-      firstname:this.contact.value.firstname,
-      lastname:this.contact.value.lastname,
-      email_id:this.contact.value.email,
-      Comment:this.contact.value.comment,
+    let bodycomp:UserDetails = {
+      firstname:this.contact.get("firstname")?.value,
+      lastname:this.contact.get("lastname")?.value,
+      email_id:this.contact.get("email")?.value,
+      p_Comment:this.contact.get("comment")?.value,
     }
-
+     // console.log(bodycomp.firstname);
       this.doctorServiceService.submitUser(bodycomp).subscribe(data =>{
-         console.log(data);
+        
       });
       
       alert("Thanks for your response we will contact you soon")
