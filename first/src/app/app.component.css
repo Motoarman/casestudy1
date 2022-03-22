@@ -3,7 +3,8 @@
   --black:#354046;
 }
 .main-div{
-  min-height: 70vh;
+  min-height: 60vh;
+  max-height: 140vh;
 }
 
 .footer-div

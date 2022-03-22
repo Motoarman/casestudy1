@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
-import { data } from 'jquery';
 import { DoctorServiceService } from 'src/app/doctor-service.service';
+import { UserDetails } from '../user-details';
 
 @Component({
   selector: 'app-contact-us',
@@ -10,7 +10,7 @@ import { DoctorServiceService } from 'src/app/doctor-service.service';
 })
 export class ContactUsComponent{
 
-  
+  UserDetails! :UserDetails[]
   constructor(private doctorServiceService: DoctorServiceService){
 
   }
@@ -20,18 +20,20 @@ export class ContactUsComponent{
     lastname:new FormControl('',[Validators.required]),
     email:new FormControl('',[Validators.required]),
     comment:new FormControl('',[Validators.required])
-  })
-  onSubmit()
-  {
-    const bodycomp={
-      firstname:this.contact.value.firstname,
-      lastname:this.contact.value.lastname,
-      email_id:this.contact.value.email,
-      Comment:this.contact.value.comment,
-    }
 
-      this.doctorServiceService.submitUser(bodycomp).subscribe(data =>{
-         console.log(data);
+    
+  })
+ 
+  onSubmit(data:any)
+  {
+    
+
+    //  this.doctorServiceService.submitUser(book).subscribe(data =>{
+        
+     // });
+
+      this.doctorServiceService.addEnquiry(data).subscribe(result =>{
+        console.log(result);
       });
       
       alert("Thanks for your response we will contact you soon")
