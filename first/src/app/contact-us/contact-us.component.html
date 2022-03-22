@@ -1,48 +1,49 @@
 <section class="contact-us">
-  <div class="login col-lg-4 m-auto" shadow-lg>
-      <form [formGroup]="contact" (ngSubmit)="onSubmit()">
-          <h2>Contact Us</h2>
-          <div class="form-group">
-              <label for="firstname" class="form-label">FirstName</label>
-              <input type="text" class="form-control" placeholder="Name" id="firstname" name="firstname"
-                  formControlName="firstname" ngModel required />
-              <span class="error-msg" *ngIf="
-          contact.get('firstname')?.errors &&
-          contact.get('firstname')?.touched
-        ">This is required
-              </span>
-          </div>
-          <div class="form-group">
-              <label for="lastname" class="form-label">LastName</label>
-              <input type="text" class="form-control" placeholder="Surname" id="lastname" name="lastname"
-                  formControlName="lastname" ngModel required />
-              <span class="error-msg" *ngIf="
-          contact.get('lastname')?.errors && contact.get('lastname')?.touched
-        ">This is required</span>
-          </div>
-          <div class="form-group">
-              <label for="email" class="form-label">Email address </label>
-              <input type="email" class="form-control" placeholder="eg. abc@gmail.com" id="email" name="email"
-                  aria-describedby="emailHelp" required formControlName="email" ngModel required />
-              <span class="error-msg" *ngIf="contact.get('email')?.errors && contact.get('email')?.touched">This is
-                  required
-              </span>
-          </div>
-          <div class="form-group">
-              <label for="comment" class="form-label">Comment:</label>
-              <textarea class="form-control" rows="2" id="comment" name="comment" formControlName="comment" ngModel
-                  required>
-      </textarea>
-              <span class="error-msg" *ngIf="
-          contact.get('comment')?.errors && contact.get('comment')?.touched
-        ">This is required
-              </span>
-          </div>
-          <button type="submit" (click)="onSubmit()" class="btn btn-primary col-lg-12">
-              Submit
-          </button>
-      </form>
-     
-  </div>
-</section>
-
+    <div class="login col-lg-4 m-auto" shadow-lg>
+        <form [formGroup]="contact" (ngSubmit)="onSubmit()">
+            <h2>Contact Us</h2>
+            <div class="form-group">
+                <label for="firstname" class="form-label">FirstName</label>
+                <input type="text" class="form-control" placeholder="Name" id="firstname" name="firstname"
+                    formControlName="firstname" ngModel required />
+                <span class="error-msg" *ngIf="
+            contact.get('firstname')?.errors &&
+            contact.get('firstname')?.touched
+          ">This is required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="lastname" class="form-label">LastName</label>
+                <input type="text" class="form-control" placeholder="Surname" id="lastname" name="lastname"
+                    formControlName="lastname" ngModel required />
+                <span class="error-msg" *ngIf="
+            contact.get('lastname')?.errors && contact.get('lastname')?.touched
+          ">This is required</span>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email address </label>
+                <input type="email" class="form-control" placeholder="eg. abc@gmail.com" id="email" name="email"
+                    aria-describedby="emailHelp" required formControlName="email" ngModel required />
+                <span class="error-msg" *ngIf="contact.get('email')?.errors && contact.get('email')?.touched">This is
+                    required
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="comment" class="form-label">Comment:</label>
+                <textarea class="form-control" rows="2" id="comment" name="comment" formControlName="comment" ngModel
+                    required>
+        </textarea>
+                <span class="error-msg" *ngIf="
+            contact.get('comment')?.errors && contact.get('comment')?.touched
+          ">This is required
+                </span>
+            </div>
+            <button type="submit" (click)="onSubmit()" class="btn btn-primary col-lg-12">
+                Submit
+            </button>
+        </form>
+       
+    </div>
+  </section>
+  
+  
