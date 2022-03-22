@@ -33,7 +33,6 @@ export class ContactUsComponent{
      // });
 
       this.doctorServiceService.addEnquiry(data).subscribe(result =>{
-        console.log(result);
       });
       
       alert("Thanks for your response we will contact you soon")
