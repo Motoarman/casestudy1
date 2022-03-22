@@ -1,0 +1,37 @@
+Select * from appointment
+Select * from appointment_status
+select * from patient_details
+
+insert into patient_details(first_name, last_name,phone_no,email_id,age,gender,medical_complaint,selected_date,selected_slot,visiting_status)
+values('arman','sakware',00000,'rhjy',24,'male','dental','1999-01-08','2004-10-19 10:23:54','first time')
+
+insert into patient_details(first_name, last_name,phone_no,email_id,age,gender,medical_complaint,selected_date,selected_slot,visiting_status)
+values('salman','sakware',00000,'rhjy',24,'male','dental','1999-01-08','2004-10-19 10:23:54','first time')
+
+
+
+Select * from doctors
+
+insert into doctors(first_name, last_name,phone_no,email_id,Specialization_id) values('dr.mangesh','prajapati',99999,'email',1)
+insert into doctors(first_name, last_name,phone_no,email_id,Specialization_id) values('dr.yatin','jadhav',99999,'email',1)
+
+insert into contact_us(firstname, lastname,email_id, p_comment) values('arman','sakware','email','arm')
+
+Select * from patient_details
+
+CREATE TABLE Appointment(
+Id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+Doctor_id INT NOT NULL REFERENCES Doctors(Id),
+Patient_id INT NOT NULL REFERENCES Patient_details(Id)
+)
+
+insert into Appointment(doctor_id,patient_id)
+values(4,1)
+insert into Appointment(doctor_id,patient_id)
+values(5,2)
+
+select * from patient_details
+inner join appointment on Appointment.patient_id = patient_details.id
+where doctor_id =5;
+
+
