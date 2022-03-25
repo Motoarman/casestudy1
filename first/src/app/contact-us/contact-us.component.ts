@@ -20,8 +20,26 @@ export class ContactUsComponent{
      this.doctorServiceService.addEnquiry(data).subscribe(result =>{
     });
     
+<<<<<<< HEAD
     alert("Thanks for your response we will contact you soon")
     ;
+=======
+  })
+ 
+  onSubmit(data:any)
+  {
+    
+
+    //  this.doctorServiceService.submitUser(book).subscribe(data =>{
+        
+     // });
+
+      this.doctorServiceService.addEnquiry(data).subscribe(result =>{
+      });
+      
+      alert("Thanks for your response we will contact you soon")
+      ;
+>>>>>>> c59403c653a818f0c00501e3e0c732dfcc661d5b
   }
 
 }
