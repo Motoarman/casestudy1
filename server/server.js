@@ -35,7 +35,7 @@ var appointments=undefined;
 var contact =undefined;
 
 
-db.many("select * from patient_details inner join appointment on Appointment.patient_id = patient_details.id where doctor_id =4;")
+db.many("select * from patient_details inner join appointment on Appointment.patient_id = patient_details.id where doctor_id =2;")
 .then((data) => { 
    this.appointments =data;
 }).catch((error) => {
